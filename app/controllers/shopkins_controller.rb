@@ -14,6 +14,6 @@ class ShopkinsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def shopkin_params
-      params.require(:shopkin).permit(:name, :rating, :rarity, :season, :group)
+      params.require(:shopkin).permit(:name, :rating, :rarity, :series, :team)
     end
 end
