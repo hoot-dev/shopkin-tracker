@@ -1,0 +1,31 @@
+<h1>Shopkin Tracker</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Rating</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Series</th>
+      <th>Rarity</th>
+      <th>Team</th>
+      <th>Finish</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shopkins.each do |shopkin| %>
+      <tr>
+        <td><%= link_to (image_tag "#{shopkin.image}"), shopkin_path("#{shopkin.id}") %></td>
+        <td>Star</td>
+        <td><%= shopkin.name %></td>
+        <td><%= shopkin.number %></td>
+        <td><%= shopkin.series %></td>
+        <td><%= shopkin.rarity %></td>
+        <td><%= shopkin.team %></td>
+        <td><%= shopkin.finish %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

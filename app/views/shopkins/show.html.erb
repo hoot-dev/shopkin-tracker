@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @shopkin.image %>" />
+  <strong>Rating:</strong>
+  Star
+  <strong>Name:</strong>
+  <%= @shopkin.name %>
+  <strong>Number:</strong>
+  <%= @shopkin.number %>
+  <strong>Series</strong>
+  <%= @shopkin.series %>
+  <strong>Rarity</strong>
+  <%= @shopkin.rarity %>
+  <strong>Team</strong>
+  <%= @shopkin.team %>
+  <strong>Finish</strong>
+  <%= @shopkin.finish %>
+</p>
+
+<%= link_to 'Back', shopkins_path %>
