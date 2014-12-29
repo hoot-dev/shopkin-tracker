@@ -1,27 +1,22 @@
 <h1>Shopkin Tracker</h1>
 
+<%= form_tag shopkins_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <table>
   <thead>
     <tr>
       <th>Pic</th>
-      <th>
-          Rating
-      </th>
-      <th>
-          Name
-      </th>
-      <th>
-          Number
-      </th>
-      <th>
-          Series
-      </th>
-      <th>
-          Rarity
-      </th>
-      <th>
-          Team
-      </th>
+      <th><%= sortable 'rating' %></th>
+      <th><%= sortable 'name' %></th>
+      <th><%= sortable 'number' %></th>
+      <th><%= sortable 'series' %></th>
+      <th><%= sortable 'rarity' %></th>
+      <th><%= sortable 'team' %></th>
     </tr>
   </thead>
 
