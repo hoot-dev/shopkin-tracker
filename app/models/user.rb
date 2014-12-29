@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :shopkins, through: :shopkins_users
+
+  def num_owned(shopkin)
+    self.shopkins_users.owned(shopkin.id)
+  end
 end

@@ -2,7 +2,7 @@ class ShopkinsController < ApplicationController
   # GET /shopkins
   # GET /shopkins.json
   def index
-    @shopkins = Shopkin.all
+    @shopkins = Shopkin.page(params[:page]).per(10)
   end
 
   # GET /shopkins/1
